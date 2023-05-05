@@ -82,6 +82,9 @@ class C_login extends CI_Controller {
       $nisn_siswa = htmlspecialchars($this->input->post('nisn_siswa', true), ENT_QUOTES);
       $password = htmlspecialchars($this->input->post('password', true), ENT_QUOTES);
 
+      var_dump($nisn_siswa);
+      var_dump($password);
+
       $cek_login = $this->M_login->login_bismen($nisn_siswa, $password);
 
       if ($cek_login->num_rows() > 0) {
@@ -174,6 +177,34 @@ class C_login extends CI_Controller {
     $this->session->sess_destroy();
     $url = base_url();
     redirect('C_siswa');
+  }
+
+  public function logout_bismen()
+  {
+    $this->session->sess_destroy();
+    $url = base_url();
+
+     $this->session->set_flashdata('msg', '
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+      Terimakasih, Anda sudah Logout.
+    </div>
+    ');
+    
+    redirect('C_login/siswa_bismen');
+  }
+
+  public function logout_tekno()
+  {
+    $this->session->sess_destroy();
+    $url = base_url();
+
+    $this->session->set_flashdata('msg', '
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+      Terimakasih, Anda sudah Logout.
+    </div>
+    ');
+
+    redirect('C_login/siswa_tekno');
   }
 
   public function admin_logout()

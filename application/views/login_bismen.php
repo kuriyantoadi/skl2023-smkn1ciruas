@@ -38,26 +38,28 @@
 								<div class="border p-4 rounded">
 									<div class="text-center">
 										<img src="<?= base_url() ?>/assets/images/logo-smkn1ciruas.png" width="100" alt="" />
-										<h3 class="">SKL Jurusan Bismen</h3>
-										<h3 class="">Tahun Ajaran 2022/2023</h3>
+										<h4 class="">SKL Jurusan Bismen</h4>
+										<h4 class="">Tahun Ajaran 2022/2023</h4>
 										<h5>SMK NEGERI 1 CIRUAS</h4>
 									</div>
 									
 									</div>
 									<div class="form-body">
 										
-    								  <?= form_open('C_login/login_bismen'); ?>
+                      <br><?= $this->session->flashdata('msg') ?>
 
 
-										<form class="row g-3" action="" method="post">
+										<!-- <form class="row g-3" action="" method="post"> -->
+										<?= form_open('C_login/login_bismen'); ?>
+
 											<div class="col-12">
 												<br><label for="inputNISN" class="form-label">NISN</label>
-												<input type="text" class="form-control" id="inputNISN" name="nisn_siswa" placeholder="NISN" require>
+												<input type="text" class="form-control" id="inputNISN" placeholder="NISN" name="nisn_siswa" require>
 											</div>
 											<div class="col-12">
 												<br><label for="inputChoosePassword" class="form-label">Sandi</label>
 												<div class="input-group" id="show_hide_password">
-													<input type="password" class="form-control border-end-0" id="inputChoosePassword" name="password" placeholder="Sandi" require> <a href="javascript:;" class="input-group-text bg-transparent"><i class='bx bx-hide'></i></a>
+													<input type="password" class="form-control border-end-0" id="inputChoosePassword" placeholder="Sandi" name="password" require> <a href="javascript:;" class="input-group-text bg-transparent"><i class='bx bx-hide'></i></a>
 												</div>
 											</div>
 											<div class="col-md-6">
@@ -73,13 +75,15 @@
 											</div>
 											<div class="col-12">
 												<div class="d-grid"><br>
-													<button type="submit" class="btn btn-primary"><i class="bx bxs-lock-open"></i>LOGIN</button>
+													<input type="submit" class="btn btn-primary"></input>
 													<a style="margin-top: 20px" href="<?= base_url() ?>index.php/C_login/siswa_tekno" class="btn btn-secondary"><i class="bx bxs-left-arrow"></i>Login Jurusan Teknologi</a>
 												</div>
 											</div>
-										</form>
 
-									      <?= form_close() ?>
+										  <?= form_close() ?>
+
+										<!-- </form> -->
+
 	
 									</div>
 								</div>

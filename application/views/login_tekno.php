@@ -38,8 +38,8 @@
 								<div class="border p-4 rounded">
 									<div class="text-center">
 										<img src="<?= base_url() ?>/assets/images/logo-smkn1ciruas.png" width="100" alt="" />
-										<h3 class="">SKL Jurusan Teknologi</h3>
-										<h3 class="">Tahun Ajaran 2022/2023</h3>
+										<h4 class="">SKL Jurusan Teknologi</h4>
+										<h4 class="">Tahun Ajaran 2022/2023</h4>
 										<h5>SMK NEGERI 1 CIRUAS</h4>
 									</div>
 									

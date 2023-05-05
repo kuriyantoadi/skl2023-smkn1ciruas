@@ -4,14 +4,23 @@
 		<nav class="navbar navbar-expand-lg navbar-light bg-white rounded rounded-0 shadow-sm">
 			<div class="container-fluid">
 				<a class="navbar-brand" href="#">
-					SISTEM SKL SMKN 1 CIRUAS
+					Sistem SKL SMKN 1 Ciruas
 				</a>
+
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarSupportedContent1">
+					<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+						<li class="nav-item"> <a class="btn btn-danger" aria-current="page" href="<?= site_url('C_login/logout_tekno/'); ?>"><i class='lni lni-exit me-1'></i>Log Out</a>
+						</li>
+					</ul>
+				</div>
 			</div>
 		</nav>
 		<div class="d-flex align-items-center justify-content-center">
 			<div class="container mt-5">
-				<h4 class="mb-0 text-uppercase text-center">tahun ajaran 2022/2023</h4>
-				<h4 class="mb-0 text-uppercase text-center">smkn 1 ciruas</h4>
+				<h4 class="mb-0 text-uppercase text-center">Tahun Ajaran 2022/2023</h4>
+				<h4 class="mb-0 text-uppercase text-center">SMKN 1 Ciruas</h4>
 				<h5 class="mb-0 text-center">File Surat Keputusan Kelulusan</h5>
 				<center class="mt-5">
 					<!-- <a href="#" class="btn btn-success px-3">Unduh Surat Kelulusan Anda</a>		 -->

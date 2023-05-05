@@ -6,6 +6,15 @@
 				<a class="navbar-brand" href="#">
 					SISTEM SKL SMKN 1 CIRUAS
 				</a>
+
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarSupportedContent1">
+					<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+						<li class="nav-item"> <a class="btn btn-danger" aria-current="page" href="<?= site_url('C_login/logout_bismen/'); ?>"><i class='lni lni-exit me-1'></i>Log Out</a>
+						</li>
+					</ul>
+				</div>
 			</div>
 		</nav>
 		<div class="d-flex align-items-center justify-content-center">
