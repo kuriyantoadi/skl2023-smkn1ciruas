@@ -14,7 +14,7 @@
 				<h4 class="mb-0 text-uppercase text-center">smkn 1 ciruas</h4>
 				<h5 class="mb-0 text-center">File Surat Keputusan Kelulusan</h5>
 				<center class="mt-5">
-					<a href="#" class="btn btn-success px-3">Unduh Surat Kelulusan Anda</a>		
+					<!-- <a href="#" class="btn btn-success px-3">Unduh Surat Kelulusan Anda</a>		 -->
 
 				</center>
 				<hr/> 
