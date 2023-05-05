@@ -31,7 +31,7 @@
 										<td><?= $no++ ?></td>
 										<td> <?= $row->nama_siswa ?></td>
 										<td> <?= $row->nisn_siswa ?></td>
-										<td> <?= $row->tgl_lahir ?></td>
+										<td> <?= $row->tempat_tgl_lahir ?></td>
 										<td> <?= $row->kelas ?></td>
 										<td> <?= $row->status_kelulusan ?></td>
 										<td>
