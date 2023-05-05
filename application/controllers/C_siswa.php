@@ -28,7 +28,11 @@ class C_siswa extends CI_Controller {
     $ses_id = $this->session->userdata('ses_id');
     $data['tampil'] = $this->M_siswa->dashboard_tekno($ses_id);
 
+    $this->load->view('template/header-siswa.php');
     $this->load->view('siswa_tekno/dashboard', $data);
+    $this->load->view('template/footer-siswa.php');
+
+
   }
 
   public function cetak_tekno($ses_id)
@@ -36,6 +40,7 @@ class C_siswa extends CI_Controller {
     $data['tampil'] = $this->M_siswa->dashboard_tekno($ses_id);
 
     $this->load->view('siswa_tekno/print', $data);
+    
   }
 
   public function logout_tekno()
@@ -53,7 +58,10 @@ class C_siswa extends CI_Controller {
       $ses_id = $this->session->userdata('ses_id');
       $data['tampil'] = $this->M_siswa->dashboard_bismen($ses_id);
 
+      $this->load->view('template/header-siswa.php');
       $this->load->view('siswa_bismen/dashboard', $data);
+      $this->load->view('template/footer-siswa.php');
+
     }
 
     public function cetak_bismen($ses_id)
