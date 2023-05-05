@@ -1,3 +1,7 @@
+<div class="page-wrapper">
+	<div class="page-content">
+
+
 <div class="container">
 
   <h3 style="margin-top: 50px; margin-bottom: 20px" align='center'>Edit Data Siswa</h3>
@@ -6,7 +10,7 @@
   foreach ($tampil as $row) {
   ?>
 
-    <a style="margin-bottom: 20px;" type="button" class="btn btn-warning btn-sm" href="<?= site_url('C_admin/siswa_tekno') ?>" >Kembali</a>
+    <!-- <a style="margin-bottom: 20px;" type="button" class="btn btn-warning btn-sm" href="<?= site_url('C_admin/siswa_tekno') ?>" >Kembali</a> -->
     
   <?= form_open('C_admin/siswa_pass_up_tekno'); ?>
 
@@ -39,12 +43,15 @@
     </tr>
   </table>
   <center>
-  <a style="margin-bottom: 50px;" type="button" class="btn btn-warning btn-sm" href="<?= site_url('C_admin/siswa_tekno') ?>" >Kembali</a>
   <input style="margin-bottom: 50px" type="submit" name="submit" value="simpan" class="btn btn-info btn-sm">
+  <a style="margin-bottom: 50px;" type="button" class="btn btn-warning btn-sm" href="<?= site_url('C_admin/siswa_tekno') ?>" >Kembali</a>
 
 <?php } ?>
 <?= form_close(''); ?>
 
   </div>
+</div>
+</div>
+
 </div>
 </div>

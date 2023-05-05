@@ -189,10 +189,12 @@ class C_admin extends CI_Controller {
 		public function siswa_bismen()
 		{
 			// $ses_id_umkm = $this->session->userdata('ses_id');
-			$data['tampil_siswa'] = $this->M_admin->siswa_bismen();
+			$data['tampil'] = $this->M_admin->siswa_bismen();
 
 			$this->load->view('template/header-admin');
 			$this->load->view('admin/siswa_bismen', $data);
+			$this->load->view('template/footer-admin');
+
 		}
 
 		public function siswa_tambah()

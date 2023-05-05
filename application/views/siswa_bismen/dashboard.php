@@ -30,46 +30,46 @@
 				<div class="card">
 					<div class="card-body">
 						<table class="table mb-0">
+
+						    <?php
+							foreach ($tampil as $row) {
+							?>
+
 							<tbody>
 								<tr>
 									<th>Nama Peserta Didik</th>
 									<th>:</th>
-									<th class="text-uppercase">nama lengkap mark subreker</th>
+									<th><?= $row->nama_siswa ?></th>
 								</tr>
 								<tr>
 									<th>Tempat, Tanggal Lahir</th>
 									<th>:</th>
-									<td>Serang, 10 Desember 2004</td>
+									<th><?= $row->tempat_tgl_lahir ?></th>
 								</tr>
 								<tr>
 									<th>Nama Orang Tua / Wali</th>
 									<th>:</th>
-									<td>Anto/td>
+									<th><?= $row->nama_org_tua ?></th>
 								</tr>
 								<tr>
 									<th>Nomor Induk Siswa</th>
 									<th>:</th>
-									<td>1234</td>
+									<th><?= $row->nis_siswa ?></th>
 								</tr>
 								<tr>
 									<th>Nomor Induk Siswa Nasional</th>
 									<th>:</th>
-									<td>1234</td>
+									<th><?= $row->nisn_siswa ?></th>
 								</tr>
 								<tr>
 									<th>Program Keahlian</th>
 									<th>:</th>
-									<td>Teknik Komputer dan Jaringan</td>
-								</tr>
-								<tr>
-									<th>Keahlian Keahlian</th>
-									<th>:</th>
-									<td>Teknik Komputer dan Jaringan</td>
+									<th><?= $row->program_keahlian ?></th>
 								</tr>
 								<tr>
 									<th>Dinyatakan</th>
 									<th>:</th>
-									<th>LULUS</th>
+									<th><?= $row->status_kelulusan ?></th>
 								</tr>
 							</tbody>
 						</table>
@@ -89,32 +89,32 @@
 								<tr>
 									<td class="text-center">1</td>
 									<td>Pendidikan Agama dan Budi Pekerti</td>
-									<td class="text-center">90</td>
+									<td class="text-center"><?= $row->pai ?></td>
 								</tr>
 								<tr>
 									<td class="text-center">2</td>
 									<td>Pendidikan Pancasila dan Kewarganegaraan</td>
-									<td class="text-center">90</td>
+									<td class="text-center"><?= $row->pkn ?></td>
 								</tr>
 								<tr>
 									<td class="text-center">3</td>
 									<td>Bahasa Indonesia</td>
-									<td class="text-center">90</td>
+									<td class="text-center"><?= $row->b_ind ?></td>
 								</tr>
 								<tr>
 									<td class="text-center">4</td>
 									<td>Matematika</td>
-									<td class="text-center">90</td>
+									<td class="text-center"><?= $row->mtk ?></td>
 								</tr>
 								<tr>
 									<td class="text-center">5</td>
 									<td>Sejarah Indonesia</td>
-									<td class="text-center">90</td>
+									<td class="text-center"><?= $row->sejindo ?></td>
 								</tr>
 								<tr>
 									<td class="text-center">6</td>
 									<td>Bahasa Inggris</td>
-									<td class="text-center">90</td>
+									<td class="text-center"><?= $row->b_ing ?></td>
 								</tr>
 								<tr>
 									<th colspan="3">B. Mata Pelajaran Muatan Kewilayahan</th>
@@ -122,12 +122,12 @@
 								<tr>
 									<td class="text-center">1</td>
 									<td>Seni Budaya</td>
-									<td class="text-center">90</td>
+									<td class="text-center"><?= $row->senbud ?></td>
 								</tr>
 								<tr>
 									<td class="text-center">2</td>
 									<td>Pendidikan Jasmani, Olah Raga, dan Kesehatan</td>
-									<td class="text-center">90</td>
+									<td class="text-center"><?= $row->pjok ?></td>
 								</tr>
 								<tr>
 									<td class="text-center">3</td>
@@ -136,8 +136,8 @@
 								</tr>
 								<tr>
 									<td class="text-center"></td>
-									<td>A. Batik</td>
-									<td class="text-center">90</td>
+									<td>A. Membatik</td>
+									<td class="text-center"><?= $row->mulok ?></td>
 								</tr>
 								<tr>
 									<th colspan="3">C. Mata Pelajaran Muatan Peminatan Kejuruan</th>
@@ -145,28 +145,34 @@
 								<tr>
 									<td class="text-center">1</td>
 									<td>Simulasi dan Komunikasi Digital</td>
-									<td class="text-center">90</td>
+									<td class="text-center"><?= $row->simdig ?></td>
 								</tr>
 								<tr>
 									<td class="text-center">2</td>
-									<td>Fisika</td>
-									<td class="text-center">90</td>
+									<td>IPA</td>
+									<td class="text-center"><?= $row->ipa ?></td>
 								</tr>
 								<tr>
 									<td class="text-center">3</td>
-									<td>Kimia</td>
-									<td class="text-center">90</td>
+									<td>Dasar Program Keahlian</td>
+									<td class="text-center"><?= $row->dasar_program_keahlian ?></td>
 								</tr>
 								<tr>
 									<td class="text-center">4</td>
 									<td>Dasar Program Keahlian</td>
-									<td class="text-center">90</td>
+									<td class="text-center"><?= $row->dasar_program_keahlian ?></td>
+								</tr>
+								<tr>
+									<td class="text-center">5</td>
+									<td>Produktif Kreatif dan Kewirausahan</td>
+									<td class="text-center"><?= $row->kompetensi_keahlian ?></td>
 								</tr>
 								<tr>
 									<th colspan="2">RATA-RATA</th>
-									<th class="text-center">90</th>
+									<td class="text-center"><?= $row->rata_rata ?></td>
 								</tr>
 							</tbody>
+							<?php } ?>
 						</table>
 					</div>
 					<!--end row-->

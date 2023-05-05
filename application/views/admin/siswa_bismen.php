@@ -1,4 +1,3 @@
-
 		<!--end header -->
 		<!--start page wrapper -->
 		<div class="page-wrapper">
@@ -31,13 +30,14 @@
 										<td><?= $no++ ?></td>
 										<td> <?= $row->nama_siswa ?></td>
 										<td> <?= $row->nisn_siswa ?></td>
-										<td> <?= $row->tgl_lahir ?></td>
+										<td> <?= $row->tempat_tgl_lahir ?></td>
 										<td> <?= $row->kelas ?></td>
 										<td> <?= $row->status_kelulusan ?></td>
 										<td>
 											<div class="row row-cols-auto g-1">
 												<div class="col">
-													<a href="<?= site_url('C_admin/siswa_hapus_bismen/'.$row->id_siswa); ?>" type="button" class="btn btn-outline-danger"><i class='lni lni-trash me-0'></i>
+													<a href="<?= site_url('C_admin/siswa_hapus_bismen/'.$row->id_siswa); ?>" type="button" class="btn btn-outline-danger"
+													onclick="return confirm('Anda yakin menghapus data <?= $row->nama_siswa ?> ?')"><i class='lni lni-trash me-0'></i>
 													</a>
 												</div>
 												<div class="col">

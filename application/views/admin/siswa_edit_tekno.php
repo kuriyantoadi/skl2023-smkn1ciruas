@@ -9,8 +9,8 @@
     foreach ($tampil as $row) {
     ?>
 
-    <a style="margin-bottom: 20px;" type="button" class="btn btn-warning btn-sm" href="<?= site_url('C_admin/siswa_tekno') ?>" >Kembali</a>
-    <a style="margin-bottom: 20px;" type="button" class="btn btn-danger btn-sm" href="<?= site_url('C_admin/siswa_pass_tekno'. $row->id_siswa) ?>" >Ganti Password</a>
+    <a style="margin-bottom: 20px;" type="button" class="btn btn-warning btn-sm" href="<?= site_url('C_admin/siswa_tekno/') ?>" >Kembali</a>
+    <a style="margin-bottom: 20px;" type="button" class="btn btn-danger btn-sm" href="<?= site_url('C_admin/siswa_pass_tekno/'. $row->id_siswa) ?>" >Ganti Password</a>
 
     <table class="table table-bordered">
       <?= form_open('C_admin/siswa_edit_up_tekno'); ?>

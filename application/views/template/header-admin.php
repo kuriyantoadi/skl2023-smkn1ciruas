@@ -46,26 +46,26 @@
 			<!--navigation-->
 			<ul class="metismenu" id="menu">
 				<li>
-					<a href="#">
-						<div class="parent-icon"><i class='lni lni-layers'></i>
+					<a href="<?= site_url('C_admin/siswa_tekno/'); ?>">
+						<div class="parent-icon"><i class='lni lni-cog'></i>
 						</div>
-						<div class="menu-title">Jurusan</div>
+						<div class="menu-title">Teknologi</div>
 					</a>
 				</li>
 				<li>
-					<a href="#" target="_blank">
-						<div class="parent-icon"><i class="bx bx-folder"></i>
+					<a href="<?= site_url('C_admin/siswa_bismen/'); ?>" >
+						<div class="parent-icon"><i class="bx bx-briefcase"></i>
 						</div>
-						<div class="menu-title">Surat Kelulusan</div>
+						<div class="menu-title">Bismen</div>
 					</a>
 				</li>
-				<li>
+				<!-- <li>
 					<a href="#" target="_blank">
 						<div class="parent-icon"><i class="bx bx-support"></i>
 						</div>
 						<div class="menu-title">Support</div>
 					</a>
-				</li>
+				</li> -->
 			</ul>
 			<!--end navigation-->
 		</div>

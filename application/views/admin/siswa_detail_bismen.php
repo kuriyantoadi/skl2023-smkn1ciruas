@@ -1,3 +1,5 @@
+<div class="page-wrapper">
+			<div class="page-content">
 
   <div class="container">
     <div class="row">
@@ -166,4 +168,6 @@
 
     </table>
   <?php } ?>
+  </div>
+  </div>
   </div>

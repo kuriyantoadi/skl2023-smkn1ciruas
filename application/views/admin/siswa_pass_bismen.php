@@ -1,3 +1,5 @@
+<div class="page-wrapper">
+	<div class="page-content">
 <div class="container">
 
   <h3 style="margin-top: 50px; margin-bottom: 20px" align='center'>Edit Data Siswa</h3>
