@@ -16,7 +16,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 	<link href="<?= base_url() ?>assets/css/app.css" rel="stylesheet">
 	<link href="<?= base_url() ?>assets/css/icons.css" rel="stylesheet">
-	<title>Login SKL - SMKN 1 Ciruas</title>
+	<title>SKL - SMKN 1 Ciruas</title>
 </head>
 
 <body>

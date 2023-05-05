@@ -26,7 +26,7 @@
 	<link rel="stylesheet" href="<?= base_url() ?>assets/css/dark-theme.css"/>
 	<link rel="stylesheet" href="<?= base_url() ?>assets/css/semi-dark.css"/>
 	<link rel="stylesheet" href="<?= base_url() ?>assets/css/header-colors.css"/>
-	<title>Rocker - Bootstrap 5 Admin Dashboard Template</title>
+	<title>SKL - SMKN 1 Ciruas</title>
 </head>
 
 <body>
