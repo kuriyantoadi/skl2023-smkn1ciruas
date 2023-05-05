@@ -26,8 +26,12 @@ class C_admin extends CI_Controller {
 	{
 		// $ses_id_umkm = $this->session->userdata('ses_id');
 		$data['tampil'] = $this->M_admin->siswa_tekno();
+
+
 		$this->load->view('template/header-admin');
 		$this->load->view('admin/siswa_tekno', $data);
+		$this->load->view('template/footer-admin');
+
 	}
 
 	public function siswa_hapus_tekno($id_siswa)
