@@ -1,1 +1,1 @@
-# skl2023-smkn1ciruas
+# sk-kelulusan-2023
