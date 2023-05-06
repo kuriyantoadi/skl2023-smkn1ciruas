@@ -48,19 +48,13 @@
           <input class="form-control" type="text" name="nisn_siswa" value="<?= $row->nisn_siswa ?>"required>
         </td>
       </tr>
+
       <tr>
         <td>Program Keahlian</td>
         <td>
-          <input class="form-control" type="text" name="program_keahlian" value="<?= $row->program_keahlian ?>" required>
-        </td>
-      </tr>
-
-      <tr>
-        <td>Kompetensi Keahlian</td>
-        <td>
           <!-- <input class="form-control" type="text" name="program_keahlian" value="<?= $row->program_keahlian ?>"required> -->
 
-          <select class="form-control" name="kompetensi_keahlian" required>
+          <select class="form-control" name="program_keahlian" required>
             <option value="<?= $row->program_keahlian ?>">Pilihan Sebelumnya ( <?= $row->program_keahlian ?> )</option>
             
              <?php
@@ -214,6 +208,14 @@
         <td class="pd_col">Kompetensi Keahlian</td>
         <td>
           <input class="form-control" type="text" name="kompetensi_keahlian" value="<?= $row->kompetensi_keahlian ?>" required>
+        </td>
+      </tr>
+      </tr>
+        <tr>
+        <td align='center'>5</td>
+        <td class="pd_col">Produk Kreatif dan Kewirausahaan</td>
+        <td>
+          <input class="form-control" type="text" name="pkwu" value="<?= $row->pkwu ?>" required>
         </td>
       </tr>
       

@@ -9,12 +9,16 @@ class M_admin extends CI_Model{
   }
 
 
-//tekno
+//tekno awal
   function siswa_tekno(){
     $tampil = $this->db->get('tb_siswa_tekno')->result();
     return $tampil;
   }
 
+  public function siswa_tekno_tambah_up($data_tambah)
+  {
+    $this->db->insert('tb_siswa_tekno', $data_tambah);
+  }
 
   public function siswa_hapus_tekno($id_siswa)
   {
@@ -58,7 +62,7 @@ class M_admin extends CI_Model{
     $this->db->where($kode_siswa);
     $this->db->update('tb_siswa_tekno',$data_edit);
   }
-// tekno
+// tekno akhir
 
 
 //bismen awal
@@ -67,6 +71,10 @@ class M_admin extends CI_Model{
     return $tampil;
   }
 
+  public function siswa_bismen_tambah_up($data_tambah)
+  {
+    $this->db->insert('tb_siswa_bismen', $data_tambah);
+  }
 
   public function siswa_hapus_bismen($id_siswa)
   {
