@@ -24,17 +24,12 @@
         </td>
       </tr>
       <tr>
-        <td>Tempat Lahir</td>
+        <td>Tempat Lahir, Tanggal Lahir</td>
         <td>
-          <input class="form-control" type="text" name="tempat_lahir" value="<?= $row->tempat_lahir ?>" required>
+          <input class="form-control" type="text" name="tempat_tgl_lahir" value="<?= $row->tempat_tgl_lahir ?>" required>
         </td>
       </tr>
-      <tr>
-        <td>Tanggal Lahir (tgl/bln/thn)</td>
-        <td>
-          <input class="form-control" type="text" name="tgl_lahir" value="<?= $row->tgl_lahir ?>" required>
-        </td>
-      </tr>
+      
       <tr>
         <td>Nama Orang Tua / Wali</td>
         <td>
@@ -59,18 +54,40 @@
           <input class="form-control" type="text" name="program_keahlian" value="<?= $row->program_keahlian ?>" required>
         </td>
       </tr>
+
       <tr>
         <td>Kompetensi Keahlian</td>
         <td>
+          <!-- <input class="form-control" type="text" name="program_keahlian" value="<?= $row->program_keahlian ?>"required> -->
+
           <select class="form-control" name="kompetensi_keahlian" required>
-            <option value="<?= $row->kompetensi_keahlian ?>">Pilihan Sebelumnya ( <?= $row->kompetensi_keahlian ?> )</option>
-            <option value="AKUNTANSI DAN KEUANGAN LEMBAGA">AKUNTANSI DAN KEUANGAN LEMBAGA</option>
-            <option value="OTOMATISASI DAN TATA KELOLA PERKANTORAN">OTOMATISASI DAN TATA KELOLA PERKANTORAN</option>
-            <option value="TEKNIK KOMPUTER DAN JARINGAN">TEKNIK KOMPUTER DAN JARINGAN</option>
-            <option value="REKAYASA PERANGKAT LUNAK">REKAYASA PERANGKAT LUNAK</option>
-            <option value="TEKNIK KENDARAAN RINGAN">TEKNIK KENDARAAN RINGAN</option>
-            <option value="TEKNIK PEMESINAN">TEKNIK PEMESINAN</option>
-          </select>
+            <option value="<?= $row->program_keahlian ?>">Pilihan Sebelumnya ( <?= $row->program_keahlian ?> )</option>
+            
+             <?php
+              foreach ($tampil_komptensi as $row_komptensi) {
+              ?>
+
+            <option value="nama_komptensi_keahlian"> <?= $row_komptensi->nama_kompetensi_keahlian ?></option>
+           
+            <?php } ?>
+
+        </td>
+      </tr>
+
+      <tr>
+        <td>Kelas</td>
+        <td>
+          <select class="form-control" name="kompetensi_keahlian" required>
+            <option value="<?= $row->nama_kelas ?>">Pilihan Sebelumnya ( <?= $row->nama_kelas ?> )</option>
+            
+             <?php
+              foreach ($tampil_kelas as $row_kelas) {
+              ?>
+
+            <option value="nama_kelas"> <?= $row_kelas->nama_kelas ?></option>
+           
+            <?php } ?>
+
         </td>
       </tr>
       <tr>
@@ -164,7 +181,7 @@
         <td align='center'></td>
         <td class="pd_col">A. Batik</td>
         <td>
-          <input class="form-control" type="text" name="mulok_batik" value="<?= $row->mulok_batik ?>" required>
+          <input class="form-control" type="text" name="mulok" value="<?= $row->mulok ?>" required>
         </td>
       </tr>
       <tr>

@@ -148,7 +148,7 @@
       </tr>
       <tr>
         <td><span class="p-4">a. Batik</span></td>
-        <td><center><?= $row->mulok_batik?></td>
+        <td><center><?= $row->mulok?></td>
       </tr>
       <tr>
         <td><span class="p-4">b. ............</span></td>

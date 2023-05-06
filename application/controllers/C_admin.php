@@ -64,7 +64,7 @@ class C_admin extends CI_Controller
 		// $kode_masyarakat = array('id_masyarakat' => $id_masyarakat);
 		$data['tampil'] = $this->M_admin->siswa_edit_tekno($id_siswa);
 		$data['tampil_komptensi'] = $this->M_admin->kompetensi_keahlian();
-
+		$data['tampil_kelas'] = $this->M_admin->kelas();
 
 		$this->load->view('template/header-admin');
 		$this->load->view('admin/siswa_edit_tekno', $data);
@@ -83,8 +83,7 @@ class C_admin extends CI_Controller
 		$nis_siswa = $this->input->post('nis_siswa');
 		$nisn_siswa = $this->input->post('nisn_siswa');
 		$nama_siswa = $this->input->post('nama_siswa');
-		$tempat_lahir = $this->input->post('tempat_lahir');
-		$tgl_lahir = $this->input->post('tgl_lahir');
+		$tempat_tgl_lahir = $this->input->post('tempat_tgl_lahir');
 		$nama_org_tua = $this->input->post('nama_org_tua');
 		$program_keahlian = $this->input->post('program_keahlian');
 		$kompetensi_keahlian = $this->input->post('kompetensi_keahlian');
@@ -97,12 +96,12 @@ class C_admin extends CI_Controller
 		$senbud = $this->input->post('senbud');
 		$sejindo = $this->input->post('sejindo');
 		$pjok = $this->input->post('pjok');
-		$mulok_batik = $this->input->post('mulok_batik');
+		$mulok = $this->input->post('mulok');
 		$simdig = $this->input->post('simdig');
 		$kimia = $this->input->post('kimia');
 		$fisika = $this->input->post('fisika');
-		$dasar_program_keahlian = $this->input->post('dasar_program_keahlian');
 		$kompetensi_keahlian = $this->input->post('kompetensi_keahlian');
+		$pkwu = $this->input->post('pkwu');
 		$rata_rata = $this->input->post('rata_rata');
 
 		$kode_siswa = array('id_siswa' => $id_siswa);
@@ -111,8 +110,7 @@ class C_admin extends CI_Controller
 			'nama_siswa' => $nama_siswa,
 			'nis_siswa' => $nis_siswa,
 			'nisn_siswa' => $nisn_siswa,
-			'tempat_lahir' => $tempat_lahir,
-			'tgl_lahir' => $tgl_lahir,
+			'tempat_tgl_lahir' => $tempat_tgl_lahir,
 			'nama_org_tua' => $nama_org_tua,
 			'program_keahlian' => $program_keahlian,
 			'kompetensi_keahlian' => $kompetensi_keahlian,
@@ -125,12 +123,12 @@ class C_admin extends CI_Controller
 			'senbud' => $senbud,
 			'sejindo' => $sejindo,
 			'pjok' => $pjok,
-			'mulok_batik' => $mulok_batik,
+			'mulok' => $mulok,
 			'simdig' => $simdig,
 			'kimia' => $kimia,
 			'fisika' => $fisika,
 			'kompetensi_keahlian' => $kompetensi_keahlian,
-			'dasar_program_keahlian' => $dasar_program_keahlian,
+			'pkwu' => $pkwu,
 			'rata_rata' => $rata_rata
 
 		);
@@ -313,8 +311,7 @@ class C_admin extends CI_Controller
 		$nis_siswa = $this->input->post('nis_siswa');
 		$nisn_siswa = $this->input->post('nisn_siswa');
 		$nama_siswa = $this->input->post('nama_siswa');
-		$tempat_lahir = $this->input->post('tempat_lahir');
-		$tgl_lahir = $this->input->post('tgl_lahir');
+		$tempat_tgl_lahir = $this->input->post('tempat_tgl_lahir');
 		$nama_org_tua = $this->input->post('nama_org_tua');
 		$program_keahlian = $this->input->post('program_keahlian');
 		$kompetensi_keahlian = $this->input->post('kompetensi_keahlian');
@@ -327,7 +324,7 @@ class C_admin extends CI_Controller
 		$senbud = $this->input->post('senbud');
 		$sejindo = $this->input->post('sejindo');
 		$pjok = $this->input->post('pjok');
-		$mulok_batik = $this->input->post('mulok_batik');
+		$mulok = $this->input->post('mulok');
 		$simdig = $this->input->post('simdig');
 		$ipa = $this->input->post('ipa');
 		$dasar_program_keahlian = $this->input->post('dasar_program_keahlian');
@@ -340,8 +337,7 @@ class C_admin extends CI_Controller
 			'nama_siswa' => $nama_siswa,
 			'nis_siswa' => $nis_siswa,
 			'nisn_siswa' => $nisn_siswa,
-			'tempat_lahir' => $tempat_lahir,
-			'tgl_lahir' => $tgl_lahir,
+			'tempat_tgl_lahir' => $tempat_tgl_lahir,
 			'nama_org_tua' => $nama_org_tua,
 			'program_keahlian' => $program_keahlian,
 			'kompetensi_keahlian' => $kompetensi_keahlian,
@@ -354,7 +350,7 @@ class C_admin extends CI_Controller
 			'senbud' => $senbud,
 			'sejindo' => $sejindo,
 			'pjok' => $pjok,
-			'mulok_batik' => $mulok_batik,
+			'mulok' => $mulok,
 			'simdig' => $simdig,
 			'ipa' => $ipa,
 			'kompetensi_keahlian' => $kompetensi_keahlian,
@@ -367,12 +363,9 @@ class C_admin extends CI_Controller
 
 		$this->session->set_flashdata('msg', '
 							<div class="alert alert-primary alert-dismissible fade show" role="alert">
-								<strong>Edit data berhasil</strong>
-
-								<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-									<span aria-hidden="true">&times;</span>
-								</button>
-							</div>');
+								Edit Data Berhasil
+							</div>'
+						);
 		redirect('C_admin/siswa_bismen/' . $id_siswa);
 	}
 
@@ -400,12 +393,8 @@ class C_admin extends CI_Controller
 		$this->M_admin->siswa_pass_up_bismen($data_edit, $kode_siswa);
 
 		$this->session->set_flashdata('msg', '
-							<div class="alert alert-primary alert-dismissible fade show" role="alert">
-								<strong>Password update berhasil</strong>
-
-								<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-									<span aria-hidden="true">&times;</span>
-								</button>
+							<div class="alert alert-success alert-dismissible fade show" role="alert">
+								Edit Password Berhasil
 							</div>');
 		redirect('C_admin/siswa_bismen/' . $id_siswa);
 	}
@@ -440,13 +429,9 @@ class C_admin extends CI_Controller
 		$this->M_admin->kompetensi_keahlian_tambah_up($data_tambah);
 
 		$this->session->set_flashdata('msg', '
-						<div class="alert alert-primary alert-dismissible fade show" role="alert">
-							<strong>Tambah Data Berhasil</strong>
-
-							<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-								<span aria-hidden="true">&times;</span>
-							</button>
-						</div>');
+						<div class="alert alert-success alert-dismissible fade show" role="alert">
+								Tambah Data Berhasil
+							</div>');
 		redirect('C_admin/kompetensi_keahlian/');
 	}
 
@@ -489,16 +474,93 @@ class C_admin extends CI_Controller
 		$this->M_admin->kompetensi_keahlian_edit_up($data_edit, $id_kompetensi_keahlian);
 
 		$this->session->set_flashdata('msg', '
-						<div class="alert alert-primary alert-dismissible fade show" role="alert">
-							<strong>Edit data berhasil</strong>
-
-							<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-								<span aria-hidden="true">&times;</span>
-							</button>
-						</div>');
+						<div class="alert alert-success alert-dismissible fade show" role="alert">
+								Edit Data Berhasil
+							</div>');
 		redirect('C_admin/kompetensi_keahlian/');
 	}
 
 	// kompetensi keahlian akhir
+
+
+	// Kelas awal
+
+	public function kelas()
+	{
+		$data['tampil'] = $this->M_admin->kelas();
+
+		$this->load->view('template/header-admin');
+		$this->load->view('admin/kelas', $data);
+		$this->load->view('template/footer-admin');
+	}
+
+	public function kelas_tambah()
+	{
+		$this->load->view('template/header-admin');
+		$this->load->view('admin/kelas_tambah');
+		$this->load->view('template/footer-admin');
+	}
+
+	public function kelas_tambah_up()
+	{
+		$nama_kelas = $this->input->post('nama_kelas');
+
+		$data_tambah = array(
+			'nama_kelas' => $nama_kelas,
+		);
+
+		$this->M_admin->kelas_tambah_up($data_tambah);
+
+		$this->session->set_flashdata('msg', '
+						<div class="alert alert-success alert-dismissible fade show" role="alert">
+								Tambah Kelas Berhasil
+							</div>');
+		redirect('C_admin/kelas/');
+	}
+
+	public function kelas_hapus($id_kelas)
+	{
+		$id_kelas = array('id_kelas' => $id_kelas);
+
+		$success = $this->M_admin->kelas_hapus($id_kelas);
+		$this->session->set_flashdata('msg', '
+            				<div class="alert alert-success alert-dismissible fade show" role="alert">
+								Hapus Kelas Berhasil
+							</div>');
+		redirect('C_admin/kelas');
+	}
+
+	public function kelas_edit($id_kelas)
+	{
+		$data['tampil'] = $this->M_admin->kelas_edit($id_kelas);
+
+		$this->load->view('template/header-admin');
+		$this->load->view('admin/kelas_edit', $data);
+		$this->load->view('template/footer-admin');
+	}
+
+	public function kelas_edit_up()
+	{
+		$id_kelas = $this->input->post('id_kelas');
+		$nama_kelas = $this->input->post('nama_kelas');
+
+		$id_kelas = array('id_kelasid_kelas' => $id_kelas);
+
+		$data_edit = array(
+			'nama_kelas' => $nama_kelas,
+		);
+
+		$this->M_admin->kelas_edit_up($data_edit, $id_kelas);
+
+		$this->session->set_flashdata('msg', '
+						<div class="alert alert-success alert-dismissible fade show" role="alert">
+								Edit Kelas Berhasil
+							</div>');
+		redirect('C_admin/kelas/');
+	}
+
+
+	// kelas akhir
+
 
 }

@@ -7,6 +7,9 @@
 				<div class="card">
 					<div class="card-body">
 						<div class="table-responsive">
+
+						    <br><?= $this->session->flashdata('msg') ?>
+
 							<table id="example" class="table table-striped table-bordered" style="width:100%">
 								<thead>
 									<tr>
@@ -31,7 +34,7 @@
 										<td> <?= $row->nama_siswa ?></td>
 										<td> <?= $row->nisn_siswa ?></td>
 										<td> <?= $row->tempat_tgl_lahir ?></td>
-										<td> <?= $row->kelas ?></td>
+										<td> <?= $row->nama_kelas ?></td>
 										<td> <?= $row->status_kelulusan ?></td>
 										<td>
 											<div class="row row-cols-auto g-1">

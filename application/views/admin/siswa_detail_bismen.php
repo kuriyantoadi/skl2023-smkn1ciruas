@@ -39,7 +39,7 @@
       </tr>
       <tr>
         <td>Tempat, Tanggal Lahir</td>
-        <td>: <?= $row->tempat_lahir; echo ", "; echo $row->tgl_lahir ?></td>
+        <td>: <?= $row->tempat_tgl_lahir ?></td>
       </tr>
       <tr>
         <td>Nama Orang Tua / Wali</td>
@@ -132,7 +132,7 @@
       <tr>
         <td align='center'></td>
         <td class="pd_col">A. Batik</td>
-        <td><center><?= $row->mulok_batik?></td>
+        <td><center><?= $row->mulok?></td>
       </tr>
       <tr>
         <th class="pd_col" colspan="3">C. Mata Pelajaran Muatan Peminatan Kejuruan</th>
@@ -157,6 +157,11 @@
         <td align='center'>4</td>
         <td class="pd_col">Kompetensi Keahlian</td>
         <td><center><?= $row->kompetensi_keahlian ?></td>
+      </tr>
+      <tr>
+        <td align='center'>5</td>
+        <td class="pd_col">Produk Kreaitf dan Kewirausahaan</td>
+        <td><center><?= $row->pkwu ?></td>
       </tr>
 
       <tr>

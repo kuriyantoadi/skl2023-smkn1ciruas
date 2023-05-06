@@ -65,6 +65,23 @@
 
         </td>
       </tr>
+
+      <tr>
+        <td>Kelas</td>
+        <td>
+          <select class="form-control" name="kompetensi_keahlian" required>
+            <option value="<?= $row->nama_kelas ?>">Pilihan Sebelumnya ( <?= $row->nama_kelas ?> )</option>
+            
+             <?php
+              foreach ($tampil_kelas as $row_kelas) {
+              ?>
+
+            <option value="nama_kelas"> <?= $row_kelas->nama_kelas ?></option>
+           
+            <?php } ?>
+
+        </td>
+      </tr>
       
       <tr>
         <td>Dinyatakan</td>
@@ -158,7 +175,7 @@
         <td align='center'></td>
         <td class="pd_col">A. Batik</td>
         <td>
-          <input class="form-control" type="text" name="mulok_batik" value="<?= $row->mulok_batik ?>" required>
+          <input class="form-control" type="text" name="mulok" value="<?= $row->mulok ?>" required>
         </td>
       </tr>
       <tr>
@@ -187,16 +204,16 @@
       </tr>
       <tr>
         <td align='center'>4</td>
-        <td class="pd_col">Program Dasar Keahlian</td>
+        <td class="pd_col">Kompetensi Keahlian</td>
         <td>
-          <input class="form-control" type="text" name="dasar_program_keahlian" value="<?= $row->dasar_program_keahlian ?>" required>
+          <input class="form-control" type="text" name="kompetensi_keahlian" value="<?= $row->kompetensi_keahlian ?>" required>
         </td>
       </tr>
       <tr>
         <td align='center'>5</td>
-        <td class="pd_col">Kompetensi Keahlian</td>
+        <td class="pd_col">Produk Kreatif dan Kewirausahaan</td>
         <td>
-          <input class="form-control" type="text" name="kompetensi_keahlian" value="<?= $row->kompetensi_keahlian ?>" required>
+          <input class="form-control" type="text" name="pkwu" value="<?= $row->pkwu ?>" required>
         </td>
       </tr>
       

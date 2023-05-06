@@ -143,10 +143,39 @@ function kompetensi_keahlian(){
     $this->db->update('tb_kompetensi_keahlian',$data_edit);
   }
 
-
-
 // kompetensi keahlian akhir
 
+// kelas awal
+
+function kelas(){
+    $tampil = $this->db->get('tb_kelas')->result();
+    return $tampil;
+  }
+
+  public function kelas_tambah_up($data_tambah)
+  {
+    $this->db->insert('tb_kelas', $data_tambah);
+  }
+
+  public function kelas_hapus($id_kelas)
+  {
+    $this->db->where($id_kelas);
+    $this->db->delete('tb_kelas');
+  }
+
+  public function kelas_edit($id_kelas)
+  {
+    $this->db->where('id_kelas', $id_kompetensi_keahlian);
+    $hasil = $this->db->get('tb_kelas')->result();
+    return $hasil;
+  }
+
+  function kelas_edit_up($data_edit, $id_kelas){
+    $this->db->where($id_kelas);
+    $this->db->update('tb_kelas',$data_edit);
+  }
+
+// kelas akhir
 
 
 }
