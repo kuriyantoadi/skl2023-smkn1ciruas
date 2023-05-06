@@ -112,6 +112,43 @@ class M_admin extends CI_Model{
   }
 // bismen akhir
 
+// kompetensi keahlian awal
+
+function kompetensi_keahlian(){
+    $tampil = $this->db->get('tb_kompetensi_keahlian')->result();
+    return $tampil;
+  }
+
+  public function kompetensi_keahlian_tambah_up($data_tambah)
+  {
+    $this->db->insert('tb_kompetensi_keahlian', $data_tambah);
+  }
+
+
+  public function kompetensi_keahlian_hapus($id_kompetensi_keahlian)
+  {
+    $this->db->where($id_kompetensi_keahlian);
+    $this->db->delete('tb_kompetensi_keahlian');
+  }
+
+  public function kompetensi_keahlian_edit($id_kompetensi_keahlian)
+  {
+    $this->db->where('id_kompetensi_keahlian', $id_kompetensi_keahlian);
+    $hasil = $this->db->get('tb_kompetensi_keahlian')->result();
+    return $hasil;
+  }
+
+  function kompetensi_keahlian_edit_up($data_edit, $id_kompetensi_keahlian){
+    $this->db->where($id_kompetensi_keahlian);
+    $this->db->update('tb_kompetensi_keahlian',$data_edit);
+  }
+
+
+
+// kompetensi keahlian akhir
+
+
+
 }
 
  ?>

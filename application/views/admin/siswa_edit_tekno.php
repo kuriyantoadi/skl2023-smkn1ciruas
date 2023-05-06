@@ -25,15 +25,10 @@
       <tr>
         <td>Tempat Lahir</td>
         <td>
-          <input class="form-control" type="text" name="tempat_lahir" value="<?= $row->tempat_lahir ?>" required>
+          <input class="form-control" type="text" name="tempat_tgl_lahir" value="<?= $row->tempat_tgl_lahir ?>" required>
         </td>
       </tr>
-      <tr>
-        <td>Tanggal Lahir (tgl/bln/thn)</td>
-        <td>
-          <input class="form-control" type="text" name="tgl_lahir" value="<?= $row->tgl_lahir ?>" required>
-        </td>
-      </tr>
+      
       <tr>
         <td>Nama Orang Tua / Wali</td>
         <td>
@@ -53,27 +48,24 @@
         </td>
       </tr>
       <tr>
-        <td>Program Keahlian</td>
+        <td>Kompetensi Keahlian</td>
         <td>
-          <input class="form-control" type="text" name="program_keahlian" value="<?= $row->program_keahlian ?>"required>
+          <!-- <input class="form-control" type="text" name="program_keahlian" value="<?= $row->program_keahlian ?>"required> -->
 
-          <!-- <select class="form-control" name="program_keahlian" required>
+          <select class="form-control" name="kompetensi_keahlian" required>
             <option value="<?= $row->program_keahlian ?>">Pilihan Sebelumnya ( <?= $row->program_keahlian ?> )</option>
-            <option value="Akuntansi dan Keuangan Lembaga">Akuntansi dan Keuangan Lembaga</option>
-            <option value="Otomatisasi dan Tata Kelola Perkantoran">Otomatisasi dan Tata Kelola Perkantoran</option>
-            <option value="Teknik Komputer dan Jaringan">Teknik Komputer dan Jaringan</option>
-            <option value="Rekayasa Perangkat Lunak">Rekayasa Perangkat Lunak</option>
-            <option value="Teknik Kendaraan Ringan">Teknik Kendaraan Ringan</option>
-            <option value="Teknik Pemesinan">Teknik Pemesinan</option>
-          </select> -->
+            
+             <?php
+              foreach ($tampil_komptensi as $row_komptensi) {
+              ?>
+
+            <option value="nama_komptensi_keahlian"> <?= $row_komptensi->nama_kompetensi_keahlian ?></option>
+           
+            <?php } ?>
+
         </td>
       </tr>
-      <tr>
-        <td>Paket Keahlian</td>
-        <td>
-          <input class="form-control" type="text" name="paket_keahlian" value="<?= $row->paket_keahlian ?>" required>
-        </td>
-      </tr>
+      
       <tr>
         <td>Dinyatakan</td>
         <td>

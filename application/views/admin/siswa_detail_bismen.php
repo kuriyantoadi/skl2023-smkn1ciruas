@@ -58,8 +58,8 @@
         <td>: <?= $row->program_keahlian ?></td>
       </tr>
       <tr>
-        <td>Paket Keahlian</td>
-        <td>: <?= $row->paket_keahlian ?></td>
+        <td>Kompetensi Keahlian</td>
+        <td>: <?= $row->kompetensi_keahlian ?></td>
       </tr>
       <tr>
         <td>Dinyatakan</td>

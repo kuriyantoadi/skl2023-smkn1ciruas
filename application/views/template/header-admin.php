@@ -59,6 +59,20 @@
 						<div class="menu-title">Bismen</div>
 					</a>
 				</li>
+				<li>
+					<a href="<?= site_url('C_admin/kelas/'); ?>" >
+						<div class="parent-icon"><i class="bx bx-list-ol"></i>
+						</div>
+						<div class="menu-title">Kelas</div>
+					</a>
+				</li>
+				<li>
+					<a href="<?= site_url('C_admin/kompetensi_keahlian/'); ?>" >
+						<div class="parent-icon"><i class="bx bx-list-check"></i>
+						</div>
+						<div class="menu-title">Kompetensi Keahlian</div>
+					</a>
+				</li>
 				<!-- <li>
 					<a href="#" target="_blank">
 						<div class="parent-icon"><i class="bx bx-support"></i>

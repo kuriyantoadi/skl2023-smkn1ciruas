@@ -60,10 +60,10 @@
         </td>
       </tr>
       <tr>
-        <td>Paket Keahlian</td>
+        <td>Kompetensi Keahlian</td>
         <td>
-          <select class="form-control" name="paket_keahlian" required>
-            <option value="<?= $row->paket_keahlian ?>">Pilihan Sebelumnya ( <?= $row->paket_keahlian ?> )</option>
+          <select class="form-control" name="kompetensi_keahlian" required>
+            <option value="<?= $row->kompetensi_keahlian ?>">Pilihan Sebelumnya ( <?= $row->kompetensi_keahlian ?> )</option>
             <option value="AKUNTANSI DAN KEUANGAN LEMBAGA">AKUNTANSI DAN KEUANGAN LEMBAGA</option>
             <option value="OTOMATISASI DAN TATA KELOLA PERKANTORAN">OTOMATISASI DAN TATA KELOLA PERKANTORAN</option>
             <option value="TEKNIK KOMPUTER DAN JARINGAN">TEKNIK KOMPUTER DAN JARINGAN</option>

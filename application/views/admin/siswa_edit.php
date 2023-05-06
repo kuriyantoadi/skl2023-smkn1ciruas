@@ -64,9 +64,9 @@
         </td>
       </tr>
       <tr>
-        <td>Paket Keahlian</td>
+        <td>Kompetensi Keahlian</td>
         <td>
-          <input class="form-control" type="text" name="paket_keahlian" value="<?= $row->paket_keahlian ?>" required>
+          <input class="form-control" type="text" name="kompetensi_keahlian" value="<?= $row->kompetensi_keahlian ?>" required>
         </td>
       </tr>
       <tr>
