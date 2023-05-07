@@ -24,6 +24,7 @@
 				<h5 class="mb-0 text-center">File Surat Keputusan Kelulusan</h5>
 
 				<a href="<?= site_url('C_siswa/cetak_bismen') ?>" class="btn btn-success btn-sm">Unduh Surat Kelulusan</a>		
+				<p>Fitur Cetak masih tahap uji coba</p>
 				<hr/> 
 				<div class="card">
 					<div class="card-body">
