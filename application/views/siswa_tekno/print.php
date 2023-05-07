@@ -4,8 +4,8 @@
   <title>Surat Keterangan Lulus - SMKN 1 Kragilan</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="<?= base_url() ?>assets/login/css/bootstrap.min.css">
-  <script src="<?= base_url() ?>assets/login/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="<?= base_url() ?>assets/cetak/css/bootstrap.min.css">
+  <script src="<?= base_url() ?>assets/cetak/js/bootstrap.min.js"></script>
   <style>
     .margin_p {
       margin-left: 60px;
@@ -23,7 +23,7 @@
 <body>
 
 <center>
-  <img src="<?= base_url() ?>/assets/img/cop-surat2.png" />
+  <img src="<?= base_url() ?>/assets/images/kop-surat.png" />
 </center>
 
   <div class="container">
@@ -32,10 +32,10 @@
         SURAT KETERANGAN LULUS
       </u>
     </h5>
-    <p align='center'>No. 422/0532/SMKN.1/2023</p>
+    <p align='center'>No. 421 / 0836 / SMKN1CRS / V / 2023</p>
 
     <p class="margin_p">
-      Kepala SMK Negeri 1 Kragilan Selaku Ketua Penyelenggara Ujian Sekolah Tahun Pelajaran
+      Kepala SMK Negeri 1 Ciruas Selaku Ketua Penyelenggara Ujian Sekolah Tahun Pelajaran
       2022/2023 Berdasarkan :
 
       <br>1. Ketuntasan dari seluruh program pembelajaran pada kurikulum 2013 Revisi
@@ -55,7 +55,7 @@
       </tr>
       <tr>
         <td>Tempat, Tanggal Lahir</td>
-        <td>: <?= $row->tempat_lahir; echo ", "; echo $row->tgl_lahir ?></td>
+        <td>: <?= $row->tempat_tgl_lahir ?></td>
       </tr>
       <tr>
         <td>Nama Orang Tua / Wali</td>
@@ -70,13 +70,10 @@
         <td>: <?= $row->nisn_siswa ?></td>
       </tr>
       <tr>
-        <td>Program Keahlian</td>
+        <td>Kompetensi Keahlian</td>
         <td>: <?= $row->program_keahlian ?></td>
       </tr>
-      <tr>
-        <td>Paket Keahlian</td>
-        <td>: <?= $row->paket_keahlian ?></td>
-      </tr>
+      
       <tr>
         <td>Dinyatakan</td>
         <td>
@@ -147,7 +144,7 @@
       </tr>
       <tr>
         <td><span class="p-4">a. Batik</span></td>
-        <td><center><?= $row->mulok_batik?></td>
+        <td><center><?= $row->mulok?></td>
       </tr>
       <tr>
         <td><span class="p-4">b. ............</span></td>
@@ -177,13 +174,13 @@
       </tr>
       <tr>
         <td align='center'>4</td>
-        <td class="pd_col">Dasar Program Keahlian</td>
-        <td><center><?= $row->dasar_program_keahlian ?></td>
+        <td class="pd_col">Kompetensi Keahlian</td>
+        <td><center><?= $row->kompetensi_keahlian ?></td>
       </tr>
       <tr>
         <td align='center'>5</td>
-        <td class="pd_col">Kompetensi Keahlian</td>
-        <td><center><?= $row->kompetensi_keahlian ?></td>
+        <td class="pd_col">Produk Kreatif dan Kewirausahan</td>
+        <td><center><?= $row->pkwu ?></td>
       </tr>
       <tr>
         <th class="pd_col text-center" colspan="2">Rata-Rata</th>

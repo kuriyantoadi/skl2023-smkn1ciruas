@@ -31,12 +31,11 @@ class C_siswa extends CI_Controller {
     $this->load->view('template/header-siswa.php');
     $this->load->view('siswa_tekno/dashboard', $data);
     $this->load->view('template/footer-siswa.php');
-
-
   }
 
-  public function cetak_tekno($ses_id)
+  public function cetak_tekno()
   {
+    $ses_id = $this->session->userdata('ses_id');
     $data['tampil'] = $this->M_siswa->dashboard_tekno($ses_id);
 
     $this->load->view('siswa_tekno/print', $data);
@@ -64,8 +63,9 @@ class C_siswa extends CI_Controller {
 
     }
 
-    public function cetak_bismen($ses_id)
+    public function cetak_bismen()
     {
+      $ses_id = $this->session->userdata('ses_id');
       $data['tampil'] = $this->M_siswa->dashboard_bismen($ses_id);
 
       $this->load->view('siswa_bismen/print', $data);

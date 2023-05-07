@@ -151,7 +151,7 @@ class C_login extends CI_Controller {
 
 
       }else {
-        $url = base_url('C_login/fa');
+        $url = base_url('index.php/C_login/fa');
         echo $this->session->set_flashdata('msg', '
 
         <div class="alert alert-danger alert-dismissible fade show" role="alert">
@@ -168,7 +168,7 @@ class C_login extends CI_Controller {
       Username atau Password Salah<br> Silahkan Login Kembali
     </div>
     ');
-    $url = base_url('C_login/fa');
+    $url = base_url('index.php/C_login/fa');
     redirect($url);
   }
 

@@ -11,7 +11,7 @@
 				</button>
 				<div class="collapse navbar-collapse" id="navbarSupportedContent1">
 					<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-						<li class="nav-item"> <a class="btn btn-danger" aria-current="page" href="<?= site_url('C_login/logout_bismen/'); ?>"><i class='lni lni-exit me-1'></i>Log Out</a>
+						<li class="nav-item"> <a class="btn btn-danger btn-sm" aria-current="page" href="<?= site_url('C_login/logout_bismen/'); ?>"><i class='lni lni-exit me-1'></i>Log Out</a>
 						</li>
 					</ul>
 				</div>
@@ -22,10 +22,8 @@
 				<h4 class="mb-0 text-uppercase text-center">Tahun Ajaran 2022/2023</h4>
 				<h4 class="mb-0 text-uppercase text-center">SMKN 1 Ciruas</h4>
 				<h5 class="mb-0 text-center">File Surat Keputusan Kelulusan</h5>
-				<center class="mt-5">
-					<!-- <a href="#" class="btn btn-success px-3">Unduh Surat Kelulusan Anda</a>		 -->
 
-				</center>
+				<a href="<?= site_url('C_siswa/cetak_bismen') ?>" class="btn btn-success btn-sm">Unduh Surat Kelulusan</a>		
 				<hr/> 
 				<div class="card">
 					<div class="card-body">
