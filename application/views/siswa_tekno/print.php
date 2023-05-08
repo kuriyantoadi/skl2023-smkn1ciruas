@@ -190,7 +190,7 @@
       </tr>
 
     </table>
-    <img width="200px" align="right" src="<?= base_url() ?>assets/img/ttd.png" style="margin-right:  150px; margin-top: 10px"/>
+    <img width="200px" align="right" src="<?= base_url() ?>assets/images/ttd.png" style="margin-right:  150px; margin-top: 10px"/>
 
   <?php } ?>
 

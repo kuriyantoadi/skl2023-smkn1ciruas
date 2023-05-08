@@ -174,7 +174,7 @@
       </tr>
 
     </table>
-    <img width="200px" align="right" src="../../images/stampel.png" style="margin-right:  80px;"/>
+    <img width="200px" align="right" src="<?= base_url() ?>assets/images/ttd.png" style="margin-right:  150px; margin-top: 10px"/>
 
   <?php } ?>
 
